@@ -17,8 +17,14 @@ class MaximumUniqueSubstring
                 if (strlen($result) < strlen($curSubStr)) {
                     $result = $curSubStr;
                 }
-                $curSubStr = $str[$i];
-                $curChars = array($str[$i]);
+                //ищем в каком месте повторение
+                $index = array_search($str[$i], $curChars);
+                //удаляем все символы из подстроки до этого места включительно
+                //и добавляем текущий символ
+                $curSubStr = substr($curSubStr, $index + 1).$str[$i];
+                //тоже самое с символами текущей подстроки
+                $curChars = array_slice($curChars, $index + 1, count($curChars) - $index + 1);
+                array_push($curChars, $str[$i]);
             }
         }
         if (strlen($result) < strlen($curSubStr)) {
