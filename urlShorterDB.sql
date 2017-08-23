@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 CREATE DATABASE  IF NOT EXISTS `url_shorter` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `url_shorter`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
