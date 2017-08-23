@@ -28,6 +28,7 @@ CREATE TABLE `Urls` (
   `short_url` varchar(10) NOT NULL,
   `long_url` varchar(100) NOT NULL,
   `idUser` int(11) NOT NULL,
+  `view_count` int(11) NOT NULL,
   PRIMARY KEY (`short_url`),
   KEY `fk_iduser_idx` (`idUser`),
   CONSTRAINT `fk_iduser` FOREIGN KEY (`idUser`) REFERENCES `Users` (`idUser`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -77,4 +78,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-23 13:42:43
+-- Dump completed on 2017-08-23 14:03:27
